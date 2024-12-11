@@ -1,0 +1,162 @@
+/* event planner*/
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077b6;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ff9800;
+}
+/* Main content */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input:focus, button:focus {
+    outline: none;
+    border-color: #0077b6;
+}
+
+button {
+    background-color: #38bdf8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0288d1;
+}
+
+/* List of events */
+#eventList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+#eventList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#eventList li span {
+    font-weight: bold;
+    color: #333;
+}
+
+#eventList li button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+#eventList li button:hover {
+    background-color: #d84e3b;
+}
+/* Fade-in effect for list items */
+#eventList li {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth transition for form inputs and button */
+input, button {
+    transition: all 0.3s ease;
+}
+
+input:focus, button:hover {
+    transform: scale(1.05); /* Slight enlargement on hover/focus */
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+        width: 90%;
+    }
+
+    input, button {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+
+    #eventList li {
+        font-size: 14px; /* Adjust font size for event list items */
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+footer {
+    text-align: center;
+    background-color: #38bdf8;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+}
+/* Body background */
+body {
+    background: linear-gradient(to right, #cce7ff, #a2c8f4);
+}
+/* Full page background image */
+body {
+    background-image: url('events.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+    color: #333; /* Optional: ensures text remains visible */
+}

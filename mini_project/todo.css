@@ -1,0 +1,163 @@
+/* Global body styling */
+body {
+    background-image: url('tod.png'); /* Background image */
+    background-size: cover; /* Ensure the image covers the full page */
+    background-position: center;
+    background-attachment: fixed; /* Fix the background while scrolling */
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    height: 100vh; /* Full height of the viewport */
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0077b6;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ff9800; /* Change color on hover */
+}
+
+/* Main container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 90%;
+    max-width: 500px;
+    min-width: 320px;
+    text-align: center;
+    margin-top: -10%;
+}
+
+/* Heading */
+h1 {
+    color: #0077b6;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Form styling */
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#todo-input, #priority {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    font-size: 1rem;
+}
+
+#todo-form button {
+    padding: 12px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#todo-form button:hover {
+    background-color: #005f80; /* Darker blue on hover */
+}
+
+/* To-Do List styling */
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #ffffff; /* White background for tasks */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for each task */
+    font-size: 1rem;
+}
+
+#todo-list li span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Completed tasks styling */
+.completed {
+    text-decoration: line-through;
+    color: #bbb; /* Lighter color for completed tasks */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    #todo-form input, #todo-form button {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    #todo-list li {
+        font-size: 14px; /* Adjust font size for tasks */
+    }
+}
+
+footer {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
